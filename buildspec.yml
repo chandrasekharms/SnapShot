@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Docker Hub...
+  build:
+    commands:
+      - echo Building Docker image...
+      - docker build -t my-image .
+      - echo Pushing Docker image to Docker Hub...
+      - docker push my-image
